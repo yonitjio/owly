@@ -1,0 +1,35 @@
+<!--
+Copyright (c) 2025 Yoni Tjio
+
+This software is released under the MIT License.
+https://opensource.org/licenses/MIT
+-->
+<templates xml:space="preserve">
+    <t t-name="navbar">
+        <nav class="navbar navbar-expand-md fixed-top bg-primary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"><img t-att-src="props.icon" width="36"/><t t-out="props.title" /></a>
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarCollapse"
+                    aria-controls="navbarCollapse"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                        <t t-foreach="this.props.menuItems" t-as="menuItem" t-key="menuItem_index">
+                            <NavbarItem callback="props.onMenuClicked" title="menuItem.title" 
+                                icon="menuItem.icon"
+                                data="menuItem.data"/>
+                        </t>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </t>
+</templates>

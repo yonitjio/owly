@@ -1,0 +1,18 @@
+<!--
+Copyright (c) 2025 Yoni Tjio
+
+This software is released under the MIT License.
+https://opensource.org/licenses/MIT
+-->
+<templates xml:space="preserve">
+    <t t-name="navbar-item">
+        <li class="nav-item">
+            <a class="nav-link" href="#" t-on-click="onClick">
+                <t t-if="props.icon">
+                    <span class="pc-micon"><i t-attf-class="ti ti-{{props.icon}}"></i></span>
+                </t>
+                <t t-out="props.title"/>
+            </a>
+        </li>
+    </t>
+</templates>

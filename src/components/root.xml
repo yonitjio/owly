@@ -1,0 +1,14 @@
+<!--
+Copyright (c) 2025 Yoni Tjio
+
+This software is released under the MIT License.
+https://opensource.org/licenses/MIT
+-->
+<templates xml:space="preserve">
+    <t t-name="main-root">
+        <Navbar icon="owlyLogo" title="'Owly'" onMenuClicked.bind="onMenuClicked" menuItems="menuItems"/>
+        <main class="container">
+            <t t-component="pageComponent" t-props="pageProps"/>
+        </main>
+    </t>
+</templates>

@@ -1,0 +1,28 @@
+<!--
+Copyright (c) 2025 Yoni Tjio
+
+This software is released under the MIT License.
+https://opensource.org/licenses/MIT
+-->
+<templates xml:space="preserve">
+    <t t-name="home-page">
+        <h1 class="mb-3">Home</h1>
+        <hr/>
+        <div class="bg-dark p-5 rounded">
+            <h2>OWL + Vite + TS</h2>
+            <p class="lead">
+                This example is a quick exercise to illustrate how to use OWL with Vite.
+            </p>
+            <a
+                class="btn btn-lg btn-primary"
+                href="https://youtube.com/@exploring-odoo"
+                role="button">
+                Exploring Odoo Youtube
+                <i class="bi bi-caret-right-fill"></i>
+            </a>
+            <btn class="btn btn-lg btn-secondary ms-2" t-on-click="onClick">
+                Counter: <t t-out="state.myState"/>
+            </btn>
+        </div>
+    </t>
+</templates>
